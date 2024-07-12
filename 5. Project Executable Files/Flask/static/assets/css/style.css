@@ -1,0 +1,327 @@
+body {
+  background-image: url();
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  opacity: 0.9;
+}
+
+header {
+  background-color: #003366;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0px;
+  z-index: 1000;
+}
+
+#ra121 {
+  margin-left: 200px;
+  font-size: larger;
+}
+
+#ra122,
+#ra123,
+#ra124,
+#ra125 {
+  margin-left: 20px;
+  font-size: larger;
+}
+
+.logo img {
+  max-height: 80px;
+  margin-right: 20px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 50px;
+  margin-left: 250px;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+  padding: 10px 5px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 120px);
+  margin-top: 600px;
+  margin-bottom: 600px;
+}
+
+.login-box {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  width: 800px;
+}
+
+.login-box h2 {
+  text-align: center;
+  color: orange;
+}
+
+.whole-form {
+  margin-top: 20px;
+}
+
+.whole-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.whole-form input[type="text"],
+.whole-form input[type="password"] {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.whole-form .submit-button {
+  background-color: #003366;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.whole-form .submit-button:hover {
+  background-color: #001f4d;
+}
+
+footer {
+  background-color: #003366;
+  color: #fff;
+  text-align: left;
+  padding: 20px 50px;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-icons {
+  display: flex;
+}
+
+.social-icons a {
+  margin-right: 10px;
+}
+
+
+/* New */
+
+.resume .resume-item {
+  padding-bottom: 10px;
+}
+
+.resume .resume-item h4 {
+  line-height: 2px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: #050d18;
+  margin-bottom: 0.5px;
+}
+
+.resume-title{
+    color: #000;
+}
+
+.resume .resume-item h5{
+    font-size: 14px;
+    background: #d3dce8;
+    /* padding: 1px 1px; */
+    display: inline-block;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 1px;
+}
+
+.resume .resume-item ul {
+  padding-left: 20px;
+}
+
+.resume .resume-item ul li {
+  padding-bottom: 10px;
+}
+
+.resume .resume-item:last-child {
+  padding-bottom: 0;
+}
+
+.form-select {
+  font-size: 12px;
+  font-weight: 550;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-control {
+  font-size: 12px;
+  font-weight: 550;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 720px;
+  height: 10px;
+
+}
+
+body {
+
+  background-size: contain;
+  background-repeat: repeat;
+  opacity: 0.95;
+  scroll-behavior: smooth;
+}
+
+#home {
+  padding: 10px 10px;
+}
+
+.main-heading {
+
+  /* color: #ff6600; */
+  color: white;
+  font-size: 46px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 0px;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.home-container {
+  padding: 0px 0;
+  background-image: url("../img/shiping1.jpg");
+  height: 150px;
+}
+
+#about {
+  padding: 10px 10px;
+}
+
+section {
+  scroll-margin-top: 150px;
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Team */
+#team {
+  background-color: white;
+  margin: 0px;
+  height: 240px;
+}
+
+#login-container {
+  margin: auto;
+}
+
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin: 20px 10px;
+}
+
+.team-member {
+  width: 300px;
+  padding: 10px;
+  margin: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.team-member h4 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.team-member p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Controls the order of appearance */
+.top-left {
+  order: 1;
+
+}
+
+.top-right {
+  order: 2;
+}
+
+.bottom-left {
+  order: 3;
+}
+
+.bottom-right {
+  order: 4;
+}
+
+
+#result-box {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  width: 800px;
+  margin: auto;
+  color: #000;
+}
+
+#result-box h2 {
+  text-align: center;
+  color: orange;
+}
+
+#prediction {
+  background-image: url("../img/ecom.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px;
+  color: white;
+}
+
+.social-handles a {
+    margin: 0 15px;
+    display: inline-block;
+}
+
+.social-handles img {
+    width: 30px;
+    height: 30px;
+}        

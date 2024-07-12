@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="E-Commerce Shipping Prediction.">
+    <title>E-Commerce Shipping Prediction</title>
+    <link rel="stylesheet" type="text/css" href="static/assets/css/style.css" />
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='assets/img/e-commers-logo.png') }}" alt="Logo">
+        </div>
+
+        <h3> E-Commerce-Shipping
+            <hr style="color: yellow;">
+            <span style="font-size: small;">Predict shipping probability</span>
+        </h3>
+        <nav>
+            <ul>
+                <li id="ra121"><a href="#home" aria-label="Home">Home</a></li>
+                <li id="ra122"><a href="#about" aria-label="About">About</a></li>
+                <li id="ra123"><a href="#prediction" aria-label="Predict">Predict</a></li>
+                <li id="ra124"><a href="#team" aria-label="Team">Team</a></li>
+                <li id="ra125"><a href="#social" aria-label="Social">Social</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="home-container">
+            <h1 class="main-heading">Ecommerce Shipping Prediction</h1>
+        </div>
+
+    </section>
+
+    <section id="about">
+        <h1 style="display: inline-block; padding: 5px 20px; border-radius: 20px;color: white; background-color: #3716cb; margin-left: 5px;">About</h1>
+        <p style="font-family:Arial, Helvetica, sans-serif; font-size: 17px;">About
+            Ecommerce shipping prediction is the process of estimating the whether the product reached on time which is
+            based on various factors such as the origin and destination of the package, the shipping method selected by
+            the customer, the carrier used for shipping, and any potential delays or issues that may arise during the
+            shipping process. Machine learning models can be used to make accurate predictions about shipping times
+            based on historical data and real-time updates from carriers. These models may take into account factors
+            such as weather conditions, traffic, and other external factors that can impact delivery times. Over All
+            Ecommerce shipping prediction is an important tool for ecommerce businesses that want to provide accurate
+            delivery estimates to their customers and improve their overall customer experience.</p>
+    </section>
+
+    <section id="prediction">
+        <h1 style="display: inline-block; padding: 5px 20px; border-radius: 20px;color: white; background-color: #3716cb; margin-left: 0px;">Predict shipping</h1>
+        <div class="login-container">
+            <div class="login-box">
+                <h2>PREDICTION</h2>
+                <form class="whole-form" action="/predict" method="post">
+                    <section id="resume" class="resume">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6" data-aos="fade-up">
+                                    <h3 class="resume-title" style="color: rgb(8, 131, 149);text-align:center;">Enter data in the fields below</h3>
+
+                                    <!-- Warehouse block -->
+                                    <div class="resume-item pb-0">
+                                        <h4>Warehouse block</h4>
+                                        <h5>(Select the value)</h5>
+                                        <p><em></em>
+                                            <input class="form-control" type="text" id="Warehouse_block"
+                                                name="Warehouse_block" list="warehouse_block_list" required>
+                                            <datalist id="warehouse_block_list">
+                                                <option value="A">
+                                                <option value="B">
+                                                <option value="C">
+                                                <option value="D">
+                                                <option value="F">
+                                            </datalist>
+                                        </p>
+                                    </div>
+
+                                    <!-- Mode of shipment -->
+                                    <div class="resume-item">
+                                        <h4>Mode of shipment</h4>
+                                        <h5>(Select the value)</h5>
+                                        <p><em></em>
+                                            <input class="form-control" type="text" id="Mode_of_Shipment"
+                                                name="Mode_of_Shipment" list="mode_of_shipment_list" required>
+                                            <datalist id="mode_of_shipment_list">
+                                                <option value="Flight">
+                                                <option value="Ship">
+                                                <option value="Road">
+                                            </datalist>
+                                        </p>
+                                    </div>
+
+                                    <!-- Customer care calls -->
+                                    <div class="resume-item">
+                                        <h4>Customer care calls</h4>
+                                        <h5>(Enter the value)</h5>
+                                        <p><em></em>
+                                            <input class="form-control" type="number" id="Customer_care_calls"
+                                                name="Customer_care_calls" min="1" required>
+                                        </p>
+                                    </div>
+
+                                    <!-- Customer rating -->
+                                    <div class="resume-item">
+                                        <h4>Customer rating</h4>
+                                        <h5>(Enter the value: 1-5)</h5>
+                                        <p><em></em>
+                                            <input class="form-control" type="number" id="Customer_rating"
+                                                name="Customer_rating" min="1" required>
+                                        </p>
+                                    </div>
+
+                                    <!-- Cost of product -->
+                                    <div class="resume-item">
+                                        <h4>Cost of product</h4>
+                                        <h5>(Enter the value)</h5>
+                                        <p><em></em>
+                                            <input class="form-control" type="number" id="Cost_of_the_Product"
+                                                name="Cost_of_the_Product" min="1" required>
+                                        </p>
+                                    </div>
+
+                                    <!-- Prior purchases -->
+                                    <div class="resume-item">
+                                        <h4>Prior purchases</h4>
+                                        <h5>(Enter the value)</h5>
+                                        <p><em></em>
+                                            <input class="form-control" type="number" id="Prior_purchases"
+                                                name="Prior_purchases" min="1" required>
+                                        </p>
+                                    </div>
+
+                                    <!-- Product Importance -->
+                                    <div class="resume-item">
+                                        <h4>Product Importance</h4>
+                                        <h5>(Select the value)</h5>
+                                        <p><em></em>
+                                            <input class="form-control" type="text" id="Product_importance"
+                                                name="Product_importance" list="product_importance_list" required>
+                                            <datalist id="product_importance_list">
+                                                <option value="low">
+                                                <option value="medium">
+                                                <option value="high">
+                                            </datalist>
+                                        </p>
+                                    </div>
+
+                                    <!-- Gender -->
+                                    <div class="resume-item">
+                                        <h4>Gender</h4>
+                                        <h5>(Select value: M-Male, F-Memale)</h5>
+                                        <p><em></em>
+                                            <input class="form-control" type="text" id="Gender" name="Gender"
+                                                list="gender_list" required>
+                                            <datalist id="gender_list">
+                                                <option value="F">
+                                                <option value="M">
+                                            </datalist>
+                                        </p>
+                                    </div>
+
+                                    <!-- Discount Offered -->
+                                    <div class="resume-item">
+                                        <h4>Discount Offered</h4>
+                                        <h5>(Enter the value in percentage(%))</h5>
+                                        <p><em></em>
+                                            <input class="form-control" type="number" id="Discount_offered"
+                                                name="Discount_offered" min="1" required>
+                                        </p>
+                                    </div>
+
+                                    <!-- Weight in Grams -->
+                                    <div class="resume-item">
+                                        <h4>Weight in Grams</h4>
+                                        <h5>(Enter the value)</h5>
+                                        <p><em></em>
+                                            <input class="form-control" type="number" id="Weight_in_gms"
+                                                name="Weight_in_gms" min="1" required>
+                                        </p>
+                                    </div>
+
+                                    <h3 class="resume-title">
+                                        <input class="btn btn-primary submit-button" type="submit" value="Predict" />
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="team">
+        <h1 style="display: inline-block; padding: 5px 20px; border-radius: 20px;color: white; background-color: #3716cb; margin-left: 5px;">Team</h1>
+        
+            <!-- <h2>TEAM</h2> -->
+            <div class="team-grid">
+                <div class="team-member top-left" style="background-color: rgb(42, 239, 108); border-radius: 10px;">
+                    <h4 style="color: rgb(0, 8, 3);">Kasi Reddy Ravinder Reddy</h4>
+                    <p><a href="mailto:kasireddy.ravinder2021@vitstudent.ac.in">kasireddy.ravinder2021@vitstudent.ac.in</a></p>
+                </div>
+                <div class="team-member top-right" style="background-color: rgb(239, 151, 56); border-radius: 10px;">
+                    <h4 style="color: rgb(0, 8, 3);">Kothaluri Murari</h4>
+                    <p><a href="mailto:kothaluri.murari2021@vitstudent.ac.in">kothaluri.murari2021@vitstudent.ac.in</a></p>
+                </div>
+                <div class="team-member bottom-left" style="background-color: rgb(218, 231, 44); border-radius: 10px;">
+                    <h4 style="color: rgb(0, 8, 3);">Segi Reddy Meghani</h4>
+                    <p><a href="mailto:segireddy.meghani2021@vitstudent.ac.in">segireddy.meghani2021@vitstudent.ac.in</a></p>
+                </div>
+                <div class="team-member bottom-right" style="background-color: rgb(110, 169, 241); border-radius: 10px;">
+                    <h4 style="color: rgb(0, 8, 3);">Dhivyadharsini SK</h4>
+                    <p><a href="mailto:dhivyadharsini.sk2021@vitstudent.ac.in">dhivyadharsini.sk2021@vitstudent.ac.in</a></p>
+                </div>
+            </div>
+    </section>
+
+
+
+    <footer id="social">
+        <div class="social-handles">
+            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+                <img src="{{ url_for('static', filename='assets/img/facebook.png') }}" alt="Facebook">
+            </a>
+            <a href="https://www.twitter.com" target="_blank" aria-label="Twitter">
+                <img src="{{ url_for('static', filename='assets/img/x.png') }}" alt="Twitter">
+            </a>
+            <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                <img src="{{ url_for('static', filename='assets/img/instagram.png') }}" alt="Instagram">
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
+                <img src="{{ url_for('static', filename='assets/img/linkedin.png') }}" alt="LinkedIn">
+            </a>
+        </div>
+        <div class="copyright">
+            Copyrights &copy; 2024 All rights reserved.
+        </div>
+    </footer>
+</body>
+
+</html>
